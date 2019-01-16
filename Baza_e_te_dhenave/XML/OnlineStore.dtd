@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT OnlineApp ANY>
+<!ELEMENT OnlineApp1 (Customers+, CreditCard+, Shippers+,Products+,Orders+, TN1+)>
+
+
+<!ELEMENT Customers (FirstName,LastName,Email,City,PostalCode,Country)>
+<!ELEMENT FirstName (#PCDATA)>
+<!ELEMENT LastName (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+<!ELEMENT City (#PCDATA)>
+<!ELEMENT PostalCode (#PCDATA)>
+<!ELEMENT Country (#PCDATA)>
+<!ATTLIST Customers CustomersID ID #REQUIRED>
+
+
+<!ELEMENT CreditCard (CardNumber,ExpireDate,SecurityCode,FirstNameC,LastNameC)>
+<!ELEMENT CardNumber (#PCDATA)>
+<!ELEMENT ExpireDate (#PCDATA)>
+<!ELEMENT SecurityCode (#PCDATA)>
+<!ELEMENT FirstNameC (#PCDATA)>
+<!ELEMENT LastNameC (#PCDATA)>
+<!ATTLIST CreditCard CardID ID #REQUIRED>
+
+
+<!ELEMENT Shippers (CompanyName,Phone,CountryS,CityS,ShippCost)>
+<!ELEMENT CompanyName (#PCDATA)>
+<!ELEMENT Phone (#PCDATA)>
+<!ELEMENT CountryS (#PCDATA)>
+<!ELEMENT CityS (#PCDATA)>
+<!ELEMENT ShippCost (#PCDATA)>
+<!ATTLIST Shippers ShippersID ID #REQUIRED>
+
+<!ELEMENT Products (ProductName,Category,size,color,UnitPrice,UnitsInStock)>
+<!ELEMENT ProductName (#PCDATA)>
+<!ELEMENT Category (#PCDATA)>
+<!ELEMENT size (#PCDATA)>
+<!ELEMENT color (#PCDATA)>
+<!ELEMENT UnitPrice (#PCDATA)>
+<!ELEMENT UnitsInStock (#PCDATA)>
+<!ATTLIST Products ProductsID ID #REQUIRED
+ShippersID IDREF #REQUIRED
+>
+ 
+
+<!ELEMENT Orders (OrderDate,ShippAdress,ShipCity,ShipPostalCode,ShipCountry,TotalPayment)>
+<!ELEMENT OrderDate (#PCDATA)>
+<!ELEMENT ShippAdress (#PCDATA)>
+<!ELEMENT ShipCity (#PCDATA)>
+<!ELEMENT ShipPostalCode (#PCDATA)>
+<!ELEMENT ShipCountry (#PCDATA)>
+<!ELEMENT TotalPayment (#PCDATA)>
+<!ATTLIST Orders OrdersID ID #REQUIRED
+CustomersID IDREF #REQUIRED
+>
+
+<!ELEMENT TN1 (Quantity,TotalPrice,ArrivalDate)>
+<!ELEMENT Quantity (#PCDATA)>
+<!ELEMENT TotalPrice (#PCDATA)>
+<!ELEMENT ArrivalDate (#PCDATA)>
+<!ATTLIST TN1 OrdersID IDREF #REQUIRED>
+<!ATTLIST TN1 ProductsID IDREF #REQUIRED>
+
+

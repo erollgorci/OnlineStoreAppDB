@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE OnlineApp SYSTEM 
+"C:\Users\eerol\Documents\Shkenca Kompjuterike\Viti i dyte\Semestri i 3\Baza e te dhenave 2018\Java e 15\Projekti\Baza_e_te_dhenave\Pjesa9\OnlineStore.dtd">
+<OnlineApp> 
+   
+     
+	     <Customers  CustomersID ="cu1">		
+		    <FirstName>Jane</FirstName>
+		    <LastName>Doe</LastName>
+		    <Email>j.doe@gmail.com</Email>
+	     	<City>Cardiff</City>
+		    <PostalCode>CF144XW</PostalCode>
+			<Country>Wales</Country>
+		</Customers>
+	
+		<Customers CustomersID="cu2">		
+			<FirstName>Narender</FirstName>
+			<LastName>Singh</LastName>
+			<Email>narender_singh@hotmail.com</Email>
+			<City>Delhi</City>
+			<PostalCode>110020</PostalCode>
+			<Country>India</Country>
+		</Customers>
+	
+		<CreditCard CardID="cr1">
+			<CardNumber>123563248569652</CardNumber>
+			<ExpireDate>01/20</ExpireDate>
+			<SecurityCode>853</SecurityCode>
+			<FirstNameC>Jane</FirstNameC>
+			<LastNameC>CDoe</LastNameC>
+		</CreditCard>
+		
+		<CreditCard CardID="cr2">
+			<CardNumber>4563256974563250</CardNumber>
+			<ExpireDate>01/19</ExpireDate>
+			<SecurityCode>236</SecurityCode>
+			<FirstNameC>Narender</FirstNameC>
+			<LastNameC>Singh</LastNameC>
+		</CreditCard>
+		
+		
+		<Shippers ShippersID="s1">		
+			<CompanyName>FedEx</CompanyName>
+			<Phone>+1 901 818 7500</Phone>
+			<CountryS>United States</CountryS>
+			<CityS>Memphis</CityS>
+			<ShippCost>2.73</ShippCost>
+		</Shippers>
+		
+		<Shippers ShippersID="s2">
+			<CompanyName>UPS</CompanyName>
+			<Phone>+1 800 742 5757</Phone>
+			<CountryS>Georgia</CountryS>
+			<CityS>Atlanta</CityS>
+			<ShippCost>2.5</ShippCost>
+		</Shippers>
+		
+	    <Products ProductsID="p1" ShippersID="s1">
+			<ProductName>necklace</ProductName>
+			<Category>jewelery</Category>
+			<size>25 cm</size>
+			<color>silver</color>
+			<UnitPrice>0.99</UnitPrice>
+			<UnitsInStock>1500</UnitsInStock>
+		</Products>
+		
+		<Products ProductsID="p2"  ShippersID="s2">		
+			<ProductName>knives</ProductName>
+			<Category>kitchen</Category>
+			<size>35 cm</size>
+			<color>silver</color>
+			<UnitPrice>20</UnitPrice>
+			<UnitsInStock>900</UnitsInStock>
+		</Products>	
+		
+		
+		<Orders OrdersID="o1" CustomersID="cu1">		
+			<OrderDate>2018-12-1</OrderDate>
+			<ShippAdress>Schulstrasse 4</ShippAdress>
+			<ShipCity>Berlin</ShipCity>
+			<ShipPostalCode>201123</ShipPostalCode>
+			<ShipCountry>Germany</ShipCountry>
+			<TotalPayment>59.2</TotalPayment>
+		</Orders>
+		
+		<Orders OrdersID="o2"  CustomersID="cu2">	
+			<OrderDate>2018-4-5</OrderDate>
+			<ShippAdress>Nagymező utca 32</ShippAdress>
+			<ShipCity>Budapest</ShipCity>
+			<ShipPostalCode>23001</ShipPostalCode>
+			<ShipCountry>Hungary</ShipCountry>
+			<TotalPayment>2359.65</TotalPayment>
+		</Orders>
+		
+	
+		
+		
+		<TN1 OrdersID="o1" ProductsID="p1">		
+			<Quantity>3</Quantity>
+			<TotalPrice>2.97</TotalPrice>
+			<ArrivalDate>2018-12-20</ArrivalDate>
+		</TN1>
+		
+		<TN1 OrdersID="o1"  ProductsID="p2">		
+			<Quantity>1</Quantity>
+			<TotalPrice>50</TotalPrice>
+			<ArrivalDate>2018-12-25</ArrivalDate>
+		</TN1>
+	
+</OnlineApp>

@@ -1,0 +1,28 @@
+use OnlineStoreApp
+go;
+
+CREATE PROCEDURE SelectCustomers @City char(30), @PostalCode char(20)
+AS
+SELECT * FROM Customers WHERE City = @City AND PostalCode = @PostalCode
+
+EXEC SelectCustomers [Ankara],[06690];
+
+CREATE PROCEDURE CostumerPayment @Name char(30), @TotalPayment money
+AS
+SELECT * FROM Customers, Orders WHERE FirstName = @Name AND TotalPayment = @TotalPayment
+
+EXEC SelectCustomers [Isac],[63.1];
+
+
+CREATE FUNCTION dbo.MaxPayment(@Payment int)
+RETURNS int
+AS
+BEGIN
+DECLARE @Nr int;
+SELECT @Nr=max(TotalPayment)
+FROM Orders c
+WHERE C.TotalPayment=@Payment;
+IF (@Nr IS NULL)
+SET @Nr=0;
+RETURN @Nr;
+END;
